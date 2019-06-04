@@ -1,0 +1,21 @@
+.col-4{
+    width: 20px;
+}
+
+.calc td{
+    text-align: center;
+    width: 20%;
+    font-size: 18px;
+}
+
+.calc td:hover{
+    background: #cccccc;
+    cursor: pointer;
+}
+
+.calc .calc-area{
+    width: 99%;
+    height: 100%;
+    text-align: right;
+    /*padding-right: 30px;*/
+}

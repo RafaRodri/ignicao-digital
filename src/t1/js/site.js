@@ -30,8 +30,8 @@ display.keydown(function (e) {
         case 'numpad 8':
         case 'numpad 9':
             /** Chamar a função "value" */
-            value($(this).html());
-            break;
+            value(key);
+            return false;
 
         /** Caso pressione um operador matemático */
         case '+':
@@ -39,8 +39,8 @@ display.keydown(function (e) {
         case '/':
         case '*':
             /** Chamar a função "operation" */
-            operation($(this).html());
-            break;
+            operation(key);
+            return false;
 
         /** Caso pressione a vírgula ou ponto */
         case ',':
@@ -88,13 +88,13 @@ $(".calculate").on("click", function () {
 });
 
 /** Evento acionado quando se clica em algum numeral (0 a 9) */
-$(".num").on("click", function () {
-    value($(this).html());
+$(".num button").on("click", function () {
+    value($(this).val());
 });
 
 /** Evento acionado quando se clica em algum botão de operação ("+", "-", "*" e "/") */
-$(".op").on("click", function () {
-    operation($(this).html());
+$(".op button").on("click", function () {
+    operation($(this).val());
 });
 
 /** Evento acionado quando se clica no botão "," para adicionar casas decimais */

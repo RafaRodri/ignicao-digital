@@ -1,6 +1,77 @@
 /** const que referencia o display da calculadora */
 const display = $(".calc-area");
 
+
+/** Evento acionado quando o usuário insere diretamente no display da calculadora, por meio do teclado */
+display.keydown(function (e) {
+    let key = e.key;
+
+    /** Avaliar qual tecla apertada, e definir o procedimento a seguir */
+    switch (key) {
+        /** Caso pressione um número */
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case 'numpad 0':
+        case 'numpad 1':
+        case 'numpad 2':
+        case 'numpad 3':
+        case 'numpad 4':
+        case 'numpad 5':
+        case 'numpad 6':
+        case 'numpad 7':
+        case 'numpad 8':
+        case 'numpad 9':
+            /** Chamar a função "value" */
+            value($(this).html());
+            break;
+
+        /** Caso pressione um operador matemático */
+        case '+':
+        case '-':
+        case '/':
+        case '*':
+            /** Chamar a função "operation" */
+            operation($(this).html());
+            break;
+
+        /** Caso pressione a vírgula ou ponto */
+        case ',':
+        case '.':
+            /** Se a expressão estiver terminando com um numeral, chamar a função "decimal" */
+            if (getIfLastInt(display.val())) {
+                decimal();
+            }
+            return false;
+
+        /** Caso pressione a techa "enter" */
+        case 'Enter':
+            /** Chamar a função "calculate" que gera o resultado */
+            calculate();
+            break;
+
+        /** Teclas permitidas para facilitar a experiência do usuário */
+        case 'Backspace':
+        case 'ArrowLeft':
+        case 'ArrowRight':
+        case 'Home':
+        case 'End':
+            break;
+
+        /** Caso pressione qualquer outra tecla, o valor desta não será inserido na expressão */
+        default:
+            return false;
+    }
+});
+
+
 /** Evento acionado quando se clica no botão "clear" da calculadora */
 $(".clear").on("click", function () {
     display.val(0);

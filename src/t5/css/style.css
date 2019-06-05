@@ -12,9 +12,9 @@ body {
 
 /*Imagem*/
 .image{
-    -webkit-animation: secret 10s ease-in;
-    -o-animation: secret 10s ease-in;
-    animation: secret 10s ease-in;
+    -webkit-animation: secret 5s ease-in;
+    -o-animation: secret 5s ease-in;
+    animation: secret 5s ease-in;
 }
 .image img{
     max-width: 100%;
@@ -41,6 +41,7 @@ li {
 .answer li{
     font-size: 1rem;
     font-weight: initial;
+    margin-bottom: 10px;
 }
 .answer li:before{
     content: '';

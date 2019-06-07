@@ -21,7 +21,8 @@ class WebController extends Controller
         $this->service = $service;
     }
 
-    public function index(){
+    public function index()
+    {
         $data = $this->service->all();
 
         return view('index', [

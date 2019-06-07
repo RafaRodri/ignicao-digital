@@ -7,17 +7,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 /*Body*/
-body{
+body {
   background-image: url(../images/background.jpg);
   background-repeat: repeat;
 }
 
 /*Menu*/
-#navbarNav{
+#navbarNav {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 13px;
 }
+
 
 /*Logo*/
 .row-logo div:first-child {

@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Tarefa 4</title>
+    <title>Layout com JSON</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    </head>
-    <body>
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
     <!--Container-->
     <div class="container p-0">
         <!--Menu-->
@@ -50,7 +50,7 @@
         <!--Banner-->
         <div class="row row-banner m-0">
             <div class="col text-center p-0">
-                <img src="{!! $data->banner !!}">
+                <img src="{!! $data->banner !!}" alt="Banner boa aparência">
             </div>
         </div>
         <!--Fim Banner-->
@@ -85,5 +85,5 @@
     <!--Scripts-->
     <script type="text/javascript" src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
-    </body>
+</body>
 </html>

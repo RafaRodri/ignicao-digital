@@ -1,98 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Calculadora</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    </head>
-    <body>
-    <!-- Table #calc -->
-    <table id="calc" class="calc">
-        <!-- Display -->
-        <tr>
-            <td colspan="5" class="display">
-                <input class="calc-area" type="text" value="0">
-            </td>
-        </tr>
-        <!-- Fim Display -->
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
 
-        <!-- Teclado calculadora -->
-        <tr>
-            <!-- Botões da 1ª linha do teclado ('7', '8', '9', '/' e 'AC') -->
-            <td class="num">
-                <button type="button" value="7">7</button>
-            </td>
-            <td class="num">
-                <button type="button" value="8">8</button>
-            </td>
-            <td class="num">
-                <button type="button" value="9">9</button>
-            </td>
-            <td class="op">
-                <button type="button" value="/"><i class="fas fa-divide"></i></button>
-            </td>
-            <td class="clear">
-                <button type="button" value="AC">AC</button>
-            </td>
-            <!-- Fim Botões da linha 1 do teclado -->
-        </tr>
-        <tr>
-            <!-- Botões da 2ª linha do teclado ('4', '5', '6', '*' e '<-') -->
-            <td class="num">
-                <button type="button" value="4">4</button>
-            </td>
-            <td class="num">
-                <button type="button" value="5">5</button>
-            </td>
-            <td class="num">
-                <button type="button" value="6">6</button>
-            </td>
-            <td class="op">
-                <button type="button" value="*"><i class="fas fa-times"></i></button>
-            </td>
-            <td class="backspace">
-                <button type="button" value="backspace"><i class="fas fa-arrow-left"></i></button>
-            </td>
-            <!-- Fim Botões da linha 2 do teclado -->
-        </tr>
-        <tr>
-            <!-- Botões da 3ª linha do teclado ('1', '2', '3', '-' e '=') -->
-            <td class="num">
-                <button type="button" value="1">1</button>
-            </td>
-            <td class="num">
-                <button type="button" value="2">2</button>
-            </td>
-            <td class="num">
-                <button type="button" value="3">3</button>
-            </td>
-            <td class="op">
-                <button type="button" value="-"><i class="fas fa-minus"></i></button>
-            </td>
-            <td class="calculate" rowspan="2">
-                <button type="button" value="="><i class="fas fa-equals"></i></button>
-            </td>
-            <!-- Fim Botões da linha 3 do teclado -->
-        </tr>
-        <tr>
-            <!-- Botões da 4ª linha do teclado ('0', '.' e '+') -->
-            <td class="num" colspan="2">
-                <button type="button" value="0">0</button>
-            </td>
-            <td class="decimal">
-                <button type="button" value=".">.</button>
-            </td>
-            <td class="op">
-                <button type="button" value="+"><i class="fas fa-plus"></i></button>
-            </td>
-            <!-- Fim Botões da linha 4 do teclado -->
-        </tr>
-        <!-- Fim Teclado calculadora -->
-    </table>
-    <!-- Fim Table #calc -->
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="images/igd-favicon.png">
 
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
-    </body>
+  <!--Styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
+  <!-- Table #calc -->
+  <table id="calc" class="calc">
+    <!-- Display -->
+    <tr>
+      <td colspan="5" class="display">
+        <input class="calc-area" type="text" value="0">
+      </td>
+    </tr>
+    <!-- Fim Display -->
+
+    <!-- Teclado calculadora -->
+    <tr>
+      <!-- Botões da 1ª linha do teclado ('7', '8', '9', '/' e 'AC') -->
+      <td class="num">
+        <button type="button" value="7">7</button>
+      </td>
+      <td class="num">
+        <button type="button" value="8">8</button>
+      </td>
+      <td class="num">
+        <button type="button" value="9">9</button>
+      </td>
+      <td class="op">
+        <button type="button" value="/"><i class="fas fa-divide"></i></button>
+      </td>
+      <td class="clear">
+        <button type="button" value="AC">AC</button>
+      </td>
+      <!-- Fim Botões da linha 1 do teclado -->
+    </tr>
+    <tr>
+      <!-- Botões da 2ª linha do teclado ('4', '5', '6', '*' e '<-') -->
+      <td class="num">
+        <button type="button" value="4">4</button>
+      </td>
+      <td class="num">
+        <button type="button" value="5">5</button>
+      </td>
+      <td class="num">
+        <button type="button" value="6">6</button>
+      </td>
+      <td class="op">
+        <button type="button" value="*"><i class="fas fa-times"></i></button>
+      </td>
+      <td class="backspace">
+        <button type="button" value="backspace"><i class="fas fa-arrow-left"></i></button>
+      </td>
+      <!-- Fim Botões da linha 2 do teclado -->
+    </tr>
+    <tr>
+      <!-- Botões da 3ª linha do teclado ('1', '2', '3', '-' e '=') -->
+      <td class="num">
+        <button type="button" value="1">1</button>
+      </td>
+      <td class="num">
+        <button type="button" value="2">2</button>
+      </td>
+      <td class="num">
+        <button type="button" value="3">3</button>
+      </td>
+      <td class="op">
+        <button type="button" value="-"><i class="fas fa-minus"></i></button>
+      </td>
+      <td class="calculate" rowspan="2">
+        <button type="button" value="="><i class="fas fa-equals"></i></button>
+      </td>
+      <!-- Fim Botões da linha 3 do teclado -->
+    </tr>
+    <tr>
+      <!-- Botões da 4ª linha do teclado ('0', '.' e '+') -->
+      <td class="num" colspan="2">
+        <button type="button" value="0">0</button>
+      </td>
+      <td class="decimal">
+        <button type="button" value=".">.</button>
+      </td>
+      <td class="op">
+        <button type="button" value="+"><i class="fas fa-plus"></i></button>
+      </td>
+      <!-- Fim Botões da linha 4 do teclado -->
+    </tr>
+    <!-- Fim Teclado calculadora -->
+  </table>
+  <!-- Fim Table #calc -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/site.js"></script>
+</body>
 </html>
